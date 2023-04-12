@@ -237,7 +237,7 @@ MonoBehaviour:
   attackCooldown: 0.1
   bulletPrefab: {fileID: 380839319408434921, guid: 58527b3779d33ee48bfc295cc718a8a2, type: 3}
   gunTransform: {fileID: 5395469538051389954}
-  damage: 0
+  damage: 2
 --- !u!114 &8758961330905166787
 MonoBehaviour:
   m_ObjectHideFlags: 0
