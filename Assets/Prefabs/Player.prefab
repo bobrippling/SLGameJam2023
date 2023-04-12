@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3572602965627892125}
   - component: {fileID: 3733436503972958315}
   - component: {fileID: 8758961330905166787}
+  - component: {fileID: 748413111513925208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,6 +78,22 @@ MonoBehaviour:
   attackCooldown: 0.1
   bulletPrefab: {fileID: 380839319408434921, guid: 58527b3779d33ee48bfc295cc718a8a2, type: 3}
   gunTransform: {fileID: 5395469538051389954}
+--- !u!58 &748413111513925208
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572602965627892124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!114 &8758961330905166787
 MonoBehaviour:
   m_ObjectHideFlags: 0

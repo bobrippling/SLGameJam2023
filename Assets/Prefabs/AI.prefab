@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8847393417176851829}
   - component: {fileID: 6935377072964256872}
   - component: {fileID: 6970355031598960853}
+  - component: {fileID: -417419683308154284}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -107,6 +108,22 @@ MonoBehaviour:
   attackCooldown: 0.1
   bulletPrefab: {fileID: 380839319408434921, guid: 58527b3779d33ee48bfc295cc718a8a2, type: 3}
   gunTransform: {fileID: 6807963056443052186}
+--- !u!58 &-417419683308154284
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572602965627892124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!114 &6970355031598960853
 MonoBehaviour:
   m_ObjectHideFlags: 0
