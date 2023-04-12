@@ -17,18 +17,28 @@ public class AttackController : MonoBehaviour {
     [SerializeField] private int damageGreen;
     [SerializeField] private int damageRed;
 
+    private AudioClip shootClip;
+    [SerializeField] private AudioClip shootBlueClip;
+    [SerializeField] private AudioClip shootGreenClip;
+    [SerializeField] private AudioClip shootRedClip;
+
+    private AudioSource audioSource;
+
     private void Start() {
         UniverseManager.Instance.OnUniverseChange.AddListener(HandleUniverseChange);
 
         damage = damageBlue;
         attackCooldown = attackCooldownBlue;
+        shootClip = shootBlueClip;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void HandleUniverseChange(int universe) {
         switch (universe) {
-            case 0: damage = damageBlue; attackCooldown = attackCooldownBlue; break;
-            case 1: damage = damageGreen; attackCooldown = attackCooldownGreen; break;
-            case 2: damage = damageRed; attackCooldown = attackCooldownRed; break;
+            case 0: damage = damageBlue; attackCooldown = attackCooldownBlue; shootClip = shootBlueClip; break;
+            case 1: damage = damageGreen; attackCooldown = attackCooldownGreen; shootClip = shootGreenClip; break;
+            case 2: damage = damageRed; attackCooldown = attackCooldownRed; shootClip = shootRedClip; break;
         }
     }
 
@@ -53,6 +63,9 @@ public class AttackController : MonoBehaviour {
             projectile.Initialise(gunTransform.up, damage, this);
 
             remainingCooldown = attackCooldown;
+
+            audioSource.clip = shootClip;
+            audioSource.Play();
         }
     }
 }
