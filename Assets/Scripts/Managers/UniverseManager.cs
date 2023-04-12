@@ -12,7 +12,7 @@ public class UniverseManager : Singleton<UniverseManager> {
     private float remainingUniverseSwitchCooldown;
 
     private const int UNIVERSES = 3;
-    private int currentUniverse = 0;
+    public int currentUniverse = 0;
 
     public OnUniverseChangeEvent OnUniverseChange = new OnUniverseChangeEvent();
 
