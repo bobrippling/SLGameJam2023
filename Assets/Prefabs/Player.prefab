@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealths: 050000000700000009000000
+  isPlayer: 1
 --- !u!58 &748413111513925208
 CircleCollider2D:
   m_ObjectHideFlags: 0
