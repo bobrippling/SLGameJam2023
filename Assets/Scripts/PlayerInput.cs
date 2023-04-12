@@ -26,5 +26,13 @@ public class PlayerInput : Singleton<PlayerInput> {
         if (Input.GetMouseButton(0)) {
             GetComponent<AttackController>().Shoot();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            UniverseManager.Instance.PreviousUniverse();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            UniverseManager.Instance.NextUniverse();
+        }
     }
 }
