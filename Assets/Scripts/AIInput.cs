@@ -19,7 +19,7 @@ public class AIInput : MonoBehaviour
 
     void Update() {
         var player = PlayerInput.Instance;
-        
+
         FacePlayer(player);
         UpdateState(player);
         ApplyState(player);
@@ -30,7 +30,7 @@ public class AIInput : MonoBehaviour
             player.transform.position.y - transform.position.y,
             player.transform.position.x - transform.position.x
         ) * Mathf.Rad2Deg - 90;
-        
+
         Character.FacingAt = player.transform.position;
     }
 

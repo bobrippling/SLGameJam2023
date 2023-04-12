@@ -9,6 +9,7 @@ public class AttackController : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private Transform gunTransform;
+    [SerializeField] private int damage;
 
     private void Update() {
         if (remainingCooldown > 0) {
@@ -28,7 +29,7 @@ public class AttackController : MonoBehaviour {
 
             ProjectileController projectile = newBullet.GetComponent<ProjectileController>();
 
-            projectile.Initialise(angle);
+            projectile.Initialise(angle, damage, this);
 
             remainingCooldown = attackCooldown;
         }
