@@ -25,6 +25,6 @@ public class Damageable : MonoBehaviour {
         }
         Destroy(col.gameObject);
 
-        GetComponent<CharacterStats>().OnTakeDamage(projectile.damage);
+        GetComponent<CharacterStats>().TakeDamage(projectile.damage);
     }
 }
