@@ -278,7 +278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2028839154342361944, guid: 96485ddae865be942a3081b5a4a96734, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2028839154342361944, guid: 96485ddae865be942a3081b5a4a96734, type: 3}
       propertyPath: m_LocalPosition.x
@@ -444,60 +444,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
---- !u!1001 &1558687950018312466
+--- !u!1001 &1682466225673003967
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6239715905816876135, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
-      propertyPath: m_Name
-      value: StarfieldFull
-      objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7785176080128459672, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+    - target: {fileID: 1154066819014746515, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5602913170889051727, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
+      propertyPath: m_Name
+      value: StarfieldFullMap
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 46adde75cc3ac72418b70af24b220b64, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b380933575b42a84e8c17cadd311b97f, type: 3}
