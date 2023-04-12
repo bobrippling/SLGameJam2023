@@ -2,13 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour {
-    public static PlayerInput Instance;
-
-    // Start is called before the first frame update
-    private void Start() {
-        Instance = this;
-    }
+public class PlayerInput : Singleton {
 
     // Update is called once per frame
     private void Update() {
