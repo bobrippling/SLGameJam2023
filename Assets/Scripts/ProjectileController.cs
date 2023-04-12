@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour {
-    [SerializeField] private float SPEED = 20f;
+    public const float DEFAULT_SPEED = 20f;
+    [SerializeField] public float SPEED = DEFAULT_SPEED;
 
     private Vector3 direction = Vector2.up;
 

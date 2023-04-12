@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : Singleton<PlayerInput> {
-    private CharacterController Character;
+    public CharacterController Character;
 
     // Start is called before the first frame update
     private void Start() {
@@ -24,7 +24,7 @@ public class PlayerInput : Singleton<PlayerInput> {
         Character.FacingAt = mouseWorldPosition;
 
         if (Input.GetMouseButton(0)) {
-            GetComponent<AttackController>().Shoot();
+            GetComponent<AttackController>().Shoot(transform.up);
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
