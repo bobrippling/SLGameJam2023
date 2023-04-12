@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIInput : MonoBehaviour
-{
-    enum AIState {
+public class AIInput : MonoBehaviour {
+
+    private enum AIState {
         ClosingIn,
         BackingOff,
         Circling,
     }
 
-    AIState State = AIState.ClosingIn;
-    CharacterController Character;
+    private AIState State = AIState.ClosingIn;
+    private CharacterController Character;
 
-    void Start() {
+    private void Start() {
         Character = GetComponent<CharacterController>();
     }
 
-    void Update() {
+    private void Update() {
         var player = PlayerInput.Instance;
 
         FacePlayer(player);
@@ -25,7 +25,7 @@ public class AIInput : MonoBehaviour
         ApplyState(player);
     }
 
-    void FacePlayer(PlayerInput player) {
+    private void FacePlayer(PlayerInput player) {
         var angleToPlayer = Mathf.Atan2(
             player.transform.position.y - transform.position.y,
             player.transform.position.x - transform.position.x
@@ -34,7 +34,7 @@ public class AIInput : MonoBehaviour
         Character.FacingAt = player.transform.position;
     }
 
-    void UpdateState(PlayerInput player) {
+    private void UpdateState(PlayerInput player) {
         var distanceToPlayer = (player.transform.position - transform.position).magnitude;
 
         if (distanceToPlayer < 3) {
@@ -46,7 +46,7 @@ public class AIInput : MonoBehaviour
         }
     }
 
-    void ApplyState(PlayerInput player) {
+    private void ApplyState(PlayerInput player) {
         var vecToPlayer = (player.transform.position - transform.position).normalized;
 
         switch (State) {
@@ -73,7 +73,7 @@ public class AIInput : MonoBehaviour
 
                 // crack out a bullet to that position
                 var aim = (futurePos - transform.position).normalized;
-                GetComponent<AttackController>().Shoot(aim);
+                GetComponent<AttackController>().Shoot();
                 break;
         }
     }
