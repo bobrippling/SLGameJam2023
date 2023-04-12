@@ -315,10 +315,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a20cb06824b02458ce05fde0927792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 0.1
+  attackCooldownBlue: 4
+  attackCooldownGreen: 5
+  attackCooldownRed: 6
   bulletPrefab: {fileID: 380839319408434921, guid: 58527b3779d33ee48bfc295cc718a8a2, type: 3}
   gunTransform: {fileID: 6807963056443052186}
-  damage: 1
+  damageBlue: 4
+  damageGreen: 5
+  damageRed: 6
 --- !u!114 &6970355031598960853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealths: 050000000500000005000000
+  isPlayer: 0
 --- !u!58 &-417419683308154284
 CircleCollider2D:
   m_ObjectHideFlags: 0

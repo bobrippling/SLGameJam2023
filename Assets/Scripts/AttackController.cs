@@ -3,13 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackController : MonoBehaviour {
-    [SerializeField] private float attackCooldown;
+    private float attackCooldown;
+    [SerializeField] private float attackCooldownBlue;
+    [SerializeField] private float attackCooldownGreen;
+    [SerializeField] private float attackCooldownRed;
     private float remainingCooldown;
 
     [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private Transform gunTransform;
-    [SerializeField] private int damage;
+    private int damage;
+    [SerializeField] private int damageBlue;
+    [SerializeField] private int damageGreen;
+    [SerializeField] private int damageRed;
+
+    private void Start() {
+        UniverseManager.Instance.OnUniverseChange.AddListener(HandleUniverseChange);
+
+        damage = damageBlue;
+        attackCooldown = attackCooldownBlue;
+    }
+
+    private void HandleUniverseChange(int universe) {
+        switch (universe) {
+            case 0: damage = damageBlue; attackCooldown = attackCooldownBlue; break;
+            case 1: damage = damageGreen; attackCooldown = attackCooldownGreen; break;
+            case 2: damage = damageRed; attackCooldown = attackCooldownRed; break;
+        }
+    }
 
     private void Update() {
         if (remainingCooldown > 0) {
