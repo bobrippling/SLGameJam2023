@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
-
     public static PlayerInput Instance;
 
     // Start is called before the first frame update
@@ -22,6 +21,10 @@ public class PlayerInput : MonoBehaviour {
         var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
 
         GetComponent<CharacterController>().MovementDirection = movementInput;
-        GetComponent<CharacterController>().FacingDirection = mouseWorldPosition;
+        GetComponent<CharacterController>().FacingAt = mouseWorldPosition;
+
+        if (Input.GetMouseButton(0)) {
+            GetComponent<AttackController>().Shoot();
+        }
     }
 }
