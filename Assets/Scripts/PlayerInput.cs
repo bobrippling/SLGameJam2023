@@ -24,7 +24,7 @@ public class PlayerInput : Singleton<PlayerInput> {
         Character.FacingAt = mouseWorldPosition;
 
         if (Input.GetMouseButton(0)) {
-            GetComponent<AttackController>().Shoot(transform.up);
+            GetComponent<AttackController>().Shoot();
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
