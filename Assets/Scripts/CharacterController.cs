@@ -7,7 +7,7 @@ public class CharacterController : MonoBehaviour {
 
     public Vector2 MovementDirection { get; set; }
 
-    public Vector3 FacingDirection { get; set; }
+    public Vector3 FacingAt { get; set; }
 
     // Start is called before the first frame update
     private void Start() {
@@ -19,6 +19,6 @@ public class CharacterController : MonoBehaviour {
             transform.position += new Vector3(MovementDirection.x, MovementDirection.y) * SPEED * Time.deltaTime;
         }
 
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(FacingDirection.y - transform.position.y, FacingDirection.x - transform.position.x) * Mathf.Rad2Deg - 90);
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(FacingAt.y - transform.position.y, FacingAt.x - transform.position.x) * Mathf.Rad2Deg - 90);
     }
 }

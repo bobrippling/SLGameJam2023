@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
 
+    public static PlayerInput Instance;
+
     // Start is called before the first frame update
     private void Start() {
+        Instance = this;
     }
 
     // Update is called once per frame
