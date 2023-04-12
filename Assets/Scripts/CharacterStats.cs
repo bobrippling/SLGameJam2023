@@ -30,11 +30,27 @@ public class CharacterStats : MonoBehaviour {
         OnHealthChange.Invoke(currentUniverse, newHealth);
 
         if (newHealth <= 0) {
+            CheckDeath();
+        }
+    }
+
+    private void CheckDeath() {
+        int healthSum = 0;
+
+        foreach (var health in currentHealths) {
+            healthSum += health;
+        }
+
+        if (healthSum <= 0) {
             Die();
         }
     }
 
     public void Die() {
+        if (isPlayer) {
+            GameManager.Instance.OnPlayerDeath();
+        }
+
         Destroy(gameObject);
     }
 }
