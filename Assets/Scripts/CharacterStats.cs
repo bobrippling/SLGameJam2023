@@ -13,6 +13,8 @@ public class CharacterStats : MonoBehaviour {
 
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
 
+    [SerializeField] private bool isPlayer = false;
+
     private void Awake() {
         currentHealths = new List<int>();
 
@@ -26,5 +28,29 @@ public class CharacterStats : MonoBehaviour {
         currentHealths[currentUniverse] = newHealth;
 
         OnHealthChange.Invoke(currentUniverse, newHealth);
+
+        if (newHealth <= 0) {
+            CheckDeath();
+        }
+    }
+
+    private void CheckDeath() {
+        int healthSum = 0;
+
+        foreach (var health in currentHealths) {
+            healthSum += health;
+        }
+
+        if (healthSum <= 0) {
+            Die();
+        }
+    }
+
+    public void Die() {
+        if (isPlayer) {
+            GameManager.Instance.OnPlayerDeath();
+        }
+
+        Destroy(gameObject);
     }
 }
