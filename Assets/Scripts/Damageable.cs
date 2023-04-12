@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour {
 
         var projectile = other.GetComponent<ProjectileController>();
         if (!projectile) {
-            Debug.LogError("no projectile in collision - player overlap?");
+            // Debug.LogError("no projectile in collision - player overlap?");
             return;
         }
         var attackCtrl = GetComponent<AttackController>();
