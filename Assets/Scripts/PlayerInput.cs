@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : Singleton {
+public class PlayerInput : Singleton<PlayerInput> {
 
     // Update is called once per frame
     private void Update() {
