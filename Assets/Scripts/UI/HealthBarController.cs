@@ -22,6 +22,6 @@ public class HealthBarController : MonoBehaviour {
     private void HandleHealthChange(int universe, int newHealth) {
         if (myUniverse != universe) return;
 
-        bar.fillAmount = newHealth / maxHealth;
+        bar.fillAmount = (float)newHealth / (float)maxHealth;
     }
 }

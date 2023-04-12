@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +22,7 @@ public class CharacterStats : MonoBehaviour {
     public void TakeDamage(int damage) {
         var currentUniverse = UniverseManager.Instance.currentUniverse;
         var currentHealth = currentHealths[currentUniverse];
-        var newHealth = currentHealths[currentUniverse] - Mathf.Max(currentHealth - damage, 0);
+        var newHealth = Mathf.Max(currentHealth - damage, 0);
         currentHealths[currentUniverse] = newHealth;
 
         OnHealthChange.Invoke(currentUniverse, newHealth);
