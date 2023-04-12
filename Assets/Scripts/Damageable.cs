@@ -23,9 +23,8 @@ public class Damageable : MonoBehaviour {
             // my sweet child
             return;
         }
-
-        //GetComponent<Health>().Hurt(projectile.damage);
-
         Destroy(col.gameObject);
+
+        GetComponent<CharacterStats>().OnTakeDamage(projectile.damage);
     }
 }

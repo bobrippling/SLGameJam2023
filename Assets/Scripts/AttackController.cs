@@ -9,7 +9,7 @@ public class AttackController : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private Transform gunTransform;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
 
     private void Update() {
         if (remainingCooldown > 0) {

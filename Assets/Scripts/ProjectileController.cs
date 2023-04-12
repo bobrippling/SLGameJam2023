@@ -7,10 +7,10 @@ public class ProjectileController : MonoBehaviour {
     [SerializeField] public float SPEED = DEFAULT_SPEED;
 
     private Vector3 direction = Vector2.up;
-    public float damage;
+    public int damage;
     public AttackController creator;
 
-    public void Initialise(Vector2 startDirection, float damage, AttackController creator) {
+    public void Initialise(Vector2 startDirection, int damage, AttackController creator) {
         transform.up = startDirection;
         this.damage = damage;
         this.creator = creator;
