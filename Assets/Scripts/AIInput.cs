@@ -62,6 +62,7 @@ public class AIInput : MonoBehaviour
                 var angle = Mathf.Atan2(vecToPlayer.y, vecToPlayer.x);
                 angle += Mathf.PI / 2;
                 Character.MovementDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                GetComponent<AttackController>().Shoot();
                 break;
         }
     }
