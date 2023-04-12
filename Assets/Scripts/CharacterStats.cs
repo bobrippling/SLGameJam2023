@@ -49,6 +49,8 @@ public class CharacterStats : MonoBehaviour {
     public void Die() {
         if (isPlayer) {
             GameManager.Instance.OnPlayerDeath();
+        } else {
+            ScoreController.Instance.OnAIDeath();
         }
 
         Destroy(gameObject);
