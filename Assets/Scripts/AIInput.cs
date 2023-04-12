@@ -12,6 +12,8 @@ public class AIInput : MonoBehaviour {
 
     private AIState State = AIState.ClosingIn;
     private CharacterController Character;
+    private float waitTimeRemaining;
+    private float circlingAngle;
 
     private void Start() {
         Character = GetComponent<CharacterController>();
@@ -37,11 +39,41 @@ public class AIInput : MonoBehaviour {
     private void UpdateState(PlayerInput player) {
         var distanceToPlayer = (player.transform.position - transform.position).magnitude;
 
+        // states that we want to stay in for a while
+        if (waitTimeRemaining > 0) {
+            waitTimeRemaining -= Time.deltaTime;
+            if (waitTimeRemaining < 0) {
+                switch (State) {
+                    case AIState.Circling:
+                        //Debug.Log("backing off (timeout)");
+                        State = AIState.BackingOff;
+                        waitTimeRemaining = 3;
+                        break;
+                    case AIState.BackingOff:
+                        //Debug.Log("closing in (timeout)");
+                        State = AIState.ClosingIn;
+                        // and maybe go straight to circling
+                        break;
+                }
+            }
+            return;
+        }
+
+        // states based on distances
         if (distanceToPlayer < 3) {
             State = AIState.BackingOff;
+            //Debug.Log("backing off (distance)");
         } else if (distanceToPlayer < 6) {
+            //Debug.Log("circling (distance)");
             State = AIState.Circling;
+
+            circlingAngle = Random.value > 0.5
+                ? Mathf.PI / 2
+                : 3 * Mathf.PI / 2;
+
+            waitTimeRemaining = 2;
         } else if (distanceToPlayer > 9) {
+            //Debug.Log("closing in (distance)");
             State = AIState.ClosingIn;
         }
     }
@@ -59,8 +91,7 @@ public class AIInput : MonoBehaviour {
                 break;
 
             case AIState.Circling:
-                var angle = Mathf.Atan2(vecToPlayer.y, vecToPlayer.x);
-                angle += Mathf.PI / 2; // right angles to the player
+                var angle = Mathf.Atan2(vecToPlayer.y, vecToPlayer.x) + circlingAngle;
                 Character.MovementDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
                 // bullet flight time to player
