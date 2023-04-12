@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour {
-    private const float SPEED = 5f;
+    public const float SPEED = 5f;
 
     public Vector2 MovementDirection { get; set; }
 

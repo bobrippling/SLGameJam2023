@@ -60,9 +60,20 @@ public class AIInput : MonoBehaviour
 
             case AIState.Circling:
                 var angle = Mathf.Atan2(vecToPlayer.y, vecToPlayer.x);
-                angle += Mathf.PI / 2;
+                angle += Mathf.PI / 2; // right angles to the player
                 Character.MovementDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-                GetComponent<AttackController>().Shoot();
+
+                // bullet flight time to player
+                var t = (player.transform.position - transform.position).magnitude / ProjectileController.DEFAULT_SPEED;
+
+                // player pos at that time
+                var movementDir = new Vector3(player.Character.MovementDirection.x, player.Character.MovementDirection.y, 0);
+                var futurePos = player.transform.position
+                    + CharacterController.SPEED * movementDir * t;
+
+                // crack out a bullet to that position
+                var aim = (futurePos - transform.position).normalized;
+                GetComponent<AttackController>().Shoot(aim);
                 break;
         }
     }
