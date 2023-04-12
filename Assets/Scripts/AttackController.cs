@@ -17,7 +17,7 @@ public class AttackController : MonoBehaviour {
         }
     }
 
-    public void Shoot(Vector3 angle) {
+    public void Shoot() {
         if (bulletPrefab == null) {
             Debug.LogError("Tried to fire a bullet that doesnt exist");
             return;
@@ -29,7 +29,7 @@ public class AttackController : MonoBehaviour {
 
             ProjectileController projectile = newBullet.GetComponent<ProjectileController>();
 
-            projectile.Initialise(angle, damage, this);
+            projectile.Initialise(gunTransform.up, damage, this);
 
             remainingCooldown = attackCooldown;
         }
