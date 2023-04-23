@@ -13,7 +13,7 @@ public class CharacterStats : MonoBehaviour {
 
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
 
-    [SerializeField] private bool isPlayer = false;
+    [SerializeField] public bool isPlayer = false;
 
     private void Awake() {
         currentHealths = new List<int>();
