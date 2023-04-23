@@ -10,7 +10,8 @@ public class OnHealthChangeEvent : UnityEvent<int, int> {
 public class CharacterStats : MonoBehaviour {
     public List<int> maxHealths;
     private List<int> currentHealths;
-
+    
+    public AudioClip deathClip;
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
 
     [SerializeField] public bool isPlayer = false;
@@ -70,7 +71,7 @@ public class CharacterStats : MonoBehaviour {
         } else {
             ScoreController.Instance.OnAIDeath();
         }
-
+        AudioManager.Instance.PlaySound(deathClip, transform.position);
         Destroy(gameObject);
     }
 }
