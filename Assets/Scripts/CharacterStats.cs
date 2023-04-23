@@ -34,8 +34,6 @@ public class CharacterStats : MonoBehaviour {
         var newHealth = Mathf.Max(currentHealth - damage, 0);
         currentHealths[currentUniverse] = newHealth;
 
-        Debug.Log("TakeDamage(" + damage + ")");
-
         OnHealthChange.Invoke(currentUniverse, newHealth);
         OnTakeDamage.Invoke(damage);
 
@@ -48,7 +46,6 @@ public class CharacterStats : MonoBehaviour {
         bool isDead = isPlayer ? IsDeadPlayer() : IsDeadEnemy();
 
         if (isDead) {
-            Debug.Log("Dead");
             Die();
         }
     }
