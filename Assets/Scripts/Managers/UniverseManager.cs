@@ -29,6 +29,8 @@ public class UniverseManager : Singleton<UniverseManager> {
 
         OnUniverseChange.Invoke(currentUniverse);
 
+        ShockwaveManager.Instance.CreateShockwave(PlayerInput.Instance.transform.position);
+
         Debug.Log(currentUniverse);
     }
 
