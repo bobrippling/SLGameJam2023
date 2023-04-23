@@ -13,7 +13,8 @@ public class OnTakeDamageEvent : UnityEvent<int> {
 public class CharacterStats : MonoBehaviour {
     public List<int> maxHealths;
     private List<int> currentHealths;
-
+    
+    public AudioClip deathClip;
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
     public OnTakeDamageEvent OnTakeDamage = new OnTakeDamageEvent();
 
@@ -75,7 +76,7 @@ public class CharacterStats : MonoBehaviour {
         } else {
             ScoreController.Instance.OnAIDeath();
         }
-
+        AudioManager.Instance.PlaySound(deathClip, transform.position);
         Destroy(gameObject);
     }
 }

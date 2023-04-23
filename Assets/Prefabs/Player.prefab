@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealths: 1e0000001e0000001e000000
+  deathClip: {fileID: 8300000, guid: 1040f7d73b52f7a489aca1f0855dccc3, type: 3}
   isPlayer: 1
 --- !u!58 &748413111513925208
 CircleCollider2D:
