@@ -17,10 +17,7 @@ public class AttackController : MonoBehaviour {
 
     [SerializeField] private Transform gunTransform;
 
-    private AudioSource audioSource;
-
     private void Start() {
-        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {

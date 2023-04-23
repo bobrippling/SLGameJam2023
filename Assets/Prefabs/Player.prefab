@@ -412,9 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cb662c21bb2b84f8f480f1d48f41eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldownBlue: 6
-  attackCooldownGreen: 2
-  attackCooldownRed: 10
+  attackCooldownBlue: 0.6
+  attackCooldownGreen: 0.2
+  attackCooldownRed: 1
   damageBlue: 3
   damageGreen: 1
   damageRed: 5
