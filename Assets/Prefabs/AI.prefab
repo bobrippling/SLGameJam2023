@@ -338,6 +338,7 @@ MonoBehaviour:
   maxHealths: 140000001400000014000000
   deathClip: {fileID: 8300000, guid: ca48d1fe7b5ec7d4a948f6b497d2e69c, type: 3}
   isPlayer: 0
+  healthPickupPrefab: {fileID: 642346876536103251, guid: 5155f0cca8989db4bb9e37a9de8f803d, type: 3}
 --- !u!58 &-417419683308154284
 CircleCollider2D:
   m_ObjectHideFlags: 0

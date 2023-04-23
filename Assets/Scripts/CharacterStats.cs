@@ -20,6 +20,8 @@ public class CharacterStats : MonoBehaviour {
 
     [SerializeField] public bool isPlayer = false;
 
+    [SerializeField] private GameObject healthPickupPrefab;
+
     private void Awake() {
         currentHealths = new List<int>();
 
@@ -77,8 +79,12 @@ public class CharacterStats : MonoBehaviour {
         if (isPlayer) {
             GameManager.Instance.OnPlayerDeath();
         } else {
+            GameObject hp = Instantiate(healthPickupPrefab);
+            hp.transform.position = transform.position;
+
             ScoreController.Instance.OnAIDeath();
         }
+
         AudioManager.Instance.PlaySound(deathClip, transform.position);
         Destroy(gameObject);
     }

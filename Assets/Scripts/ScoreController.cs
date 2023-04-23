@@ -7,12 +7,10 @@ public class ScoreController : Singleton<ScoreController> {
     [SerializeField] private TextMeshProUGUI scoreText;
     private int Score = 0, LastScore = -1;
 
-    [SerializeField] private GameObject healthPickupPrefab;
-
-    void Start() {
+    private void Start() {
     }
 
-    void Update() {
+    private void Update() {
         if (LastScore == Score) return;
         LastScore = Score;
 
@@ -21,8 +19,5 @@ public class ScoreController : Singleton<ScoreController> {
 
     public void OnAIDeath() {
         Score += 1;
-
-        GameObject hp = Instantiate(healthPickupPrefab);
-        hp.transform.position = this.transform.position;
     }
 }
