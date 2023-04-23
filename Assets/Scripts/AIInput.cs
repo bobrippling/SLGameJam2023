@@ -22,6 +22,8 @@ public class AIInput : MonoBehaviour {
     private void Update() {
         var player = PlayerInput.Instance;
 
+        if (!player) return;
+
         FacePlayer(player);
         UpdateState(player);
         ApplyState(player);

@@ -22,6 +22,8 @@ public class ParallaxController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!playerObj) return;
+
         transform.position = new Vector3(startPosition.x + (playerObj.transform.position.x / distanceRatio),
                                      startPosition.y + (playerObj.transform.position.y / distanceRatio),
                                      transform.position.z);
