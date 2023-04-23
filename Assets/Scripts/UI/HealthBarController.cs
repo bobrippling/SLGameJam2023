@@ -16,6 +16,18 @@ public class HealthBarController : MonoBehaviour {
     private void Start() {
         maxHealth = myStats.maxHealths[myUniverse];
         myStats.OnHealthChange.AddListener(HandleHealthChange);
+        UniverseManager.Instance.OnUniverseChange.AddListener(HandleUniverseChange);
+        HandleUniverseChange(UniverseManager.Instance.currentUniverse);
+    }
+
+    private void HandleUniverseChange(int universe) {
+        var tempColor = bar.color;
+        if (myUniverse == universe) {
+            tempColor.a = 1f;
+        } else {
+            tempColor.a = .6f;
+        }
+        bar.color = tempColor;
     }
 
     // Update is called once per frame
