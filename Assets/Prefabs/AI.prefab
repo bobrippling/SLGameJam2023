@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4063748778679292469}
   - component: {fileID: 3987152695696115984}
   - component: {fileID: 7684524222501844224}
+  - component: {fileID: 1497325873668641181}
   m_Layer: 0
   m_Name: AI
   m_TagString: Untagged
@@ -494,6 +495,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetGraphic: {fileID: 3572602967370010912}
+--- !u!114 &1497325873668641181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572602965627892124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dee20ba2282d245b661915683c3a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSpriteRenderer: {fileID: 3572602967370010912}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3572602965662887361
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3572602965662887362
 Transform:
   m_ObjectHideFlags: 0

@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 3574928299834880144}
   - component: {fileID: 1353961045115487728}
   - component: {fileID: 8077101745819223190}
+  - component: {fileID: 142046156186633340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -421,6 +422,20 @@ MonoBehaviour:
   shootBlueClip: {fileID: 8300000, guid: 194276775eb4df348b6327f9dfd01773, type: 3}
   shootGreenClip: {fileID: 8300000, guid: 498e47000833c6942a23109622a86db4, type: 3}
   shootRedClip: {fileID: 8300000, guid: 5734b2657fe9d7349927c3b0ee628867, type: 3}
+--- !u!114 &142046156186633340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572602965627892124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dee20ba2282d245b661915683c3a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSpriteRenderer: {fileID: 3572602967370010912}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &3572602965662887361
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3572602965662887362
 Transform:
   m_ObjectHideFlags: 0
@@ -630,7 +645,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf122a537cf24034795113e403d883ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

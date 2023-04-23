@@ -7,11 +7,15 @@ using UnityEngine.Events;
 public class OnHealthChangeEvent : UnityEvent<int, int> {
 }
 
+public class OnTakeDamageEvent : UnityEvent<int> {
+}
+
 public class CharacterStats : MonoBehaviour {
     public List<int> maxHealths;
     private List<int> currentHealths;
 
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
+    public OnTakeDamageEvent OnTakeDamage = new OnTakeDamageEvent();
 
     [SerializeField] public bool isPlayer = false;
 
@@ -28,6 +32,7 @@ public class CharacterStats : MonoBehaviour {
         currentHealths[currentUniverse] = newHealth;
 
         OnHealthChange.Invoke(currentUniverse, newHealth);
+        OnTakeDamage.Invoke(damage);
 
         if (newHealth <= 0) {
             CheckDeath();
