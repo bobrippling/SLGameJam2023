@@ -35,15 +35,33 @@ public class CharacterStats : MonoBehaviour {
     }
 
     private void CheckDeath() {
+        bool isDead = isPlayer ? IsDeadPlayer() : IsDeadEnemy();
+
+        if (isDead) {
+            Die();
+        }
+    }
+
+    private bool IsDeadPlayer() {
+        bool isDead = false;
+
+        foreach (var health in currentHealths) {
+            if (health <= 0) {
+                isDead = true;
+            }
+        }
+
+        return isDead;
+    }
+
+    private bool IsDeadEnemy() {
         int healthSum = 0;
 
         foreach (var health in currentHealths) {
             healthSum += health;
         }
 
-        if (healthSum <= 0) {
-            Die();
-        }
+        return healthSum <= 0;
     }
 
     public void Die() {
