@@ -441,44 +441,16 @@ PrefabInstance:
       value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 493.11682
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 70.91339
-      objectReference: {fileID: 0}
-    - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -40.55841
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4517994989680745287, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -107.543304
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359995657530878153, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
+      propertyPath: m_Name
+      value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 8330613816026239317, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
       propertyPath: m_RootOrder
