@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score
       objectReference: {fileID: 0}
+    - target: {fileID: 5944428679516279970, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
+      propertyPath: healthPickupPrefab
+      value: 
+      objectReference: {fileID: 642346876536103251, guid: 5155f0cca8989db4bb9e37a9de8f803d, type: 3}
     - target: {fileID: 8330613816026239317, guid: 0cd384122a7e1a2479b5cb1bfcface3c, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1023,6 +1027,26 @@ PrefabInstance:
     - target: {fileID: 3572602965627892127, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733436503972958315, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
+      propertyPath: damage
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733436503972958315, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
+      propertyPath: attackCooldown
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077101745819223190, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
+      propertyPath: damageRed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077101745819223190, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
+      propertyPath: damageBlue
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077101745819223190, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
+      propertyPath: damageGreen
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe2484076a39c54b8dfab61f744fec7, type: 3}
