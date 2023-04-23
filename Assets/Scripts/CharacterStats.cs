@@ -79,4 +79,10 @@ public class CharacterStats : MonoBehaviour {
         AudioManager.Instance.PlaySound(deathClip, transform.position);
         Destroy(gameObject);
     }
+
+    public void Heal() {
+        for (int i = 0; i < currentHealths.Count; i++) {
+            currentHealths[i] = maxHealths[i];
+        }
+    }
 }
