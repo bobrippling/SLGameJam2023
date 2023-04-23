@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackController : MonoBehaviour {
+
     // universe properties (set by spawner)
     public float attackCooldown;
+
     public int damage;
     public AudioClip shootClip;
 
@@ -43,8 +45,7 @@ public class AttackController : MonoBehaviour {
 
             remainingCooldown = attackCooldown;
 
-            audioSource.clip = shootClip;
-            audioSource.Play();
+            AudioManager.Instance.PlaySound(shootClip, transform.position);
         }
     }
 }
