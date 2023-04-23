@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Damageable : MonoBehaviour {
-    void Start() {
+
+    private void Start() {
     }
 
-    void Update() {
+    private void Update() {
     }
 
     public void OnTriggerEnter2D(Collider2D col) {
@@ -18,17 +19,19 @@ public class Damageable : MonoBehaviour {
             return;
         }
 
-        var health = other.tag == "HealthPickup";
+        var health = other.tag.Equals("HealthPickup");
         if (health) {
             OnHealthCollide();
+
+            Destroy(other.gameObject);
             return;
         }
     }
 
-    void OnBulletCollide(ProjectileController projectile) {
+    private void OnBulletCollide(ProjectileController projectile) {
         var attackCtrl = GetComponent<AttackController>();
 
-        if(projectile.creator == attackCtrl){
+        if (projectile.creator == attackCtrl) {
             // my sweet child
             return;
         }
@@ -37,9 +40,9 @@ public class Damageable : MonoBehaviour {
         GetComponent<CharacterStats>().TakeDamage(projectile.damage);
     }
 
-    void OnHealthCollide() {
+    private void OnHealthCollide() {
         var stats = GetComponent<CharacterStats>();
-        if(!stats) return;
+        if (!stats) return;
         stats.Heal();
     }
 }

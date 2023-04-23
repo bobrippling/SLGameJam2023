@@ -89,6 +89,7 @@ public class CharacterStats : MonoBehaviour {
     public void Heal() {
         for (int i = 0; i < currentHealths.Count; i++) {
             currentHealths[i] = maxHealths[i];
+            OnHealthChange.Invoke(i, currentHealths[i]);
         }
     }
 }

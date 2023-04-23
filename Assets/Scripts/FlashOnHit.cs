@@ -22,14 +22,10 @@ public class FlashOnHit : MonoBehaviour {
 
         myStats = GetComponent<CharacterStats>();
 
-        Debug.Log("Starting flash script");
-
-        myStats.OnHealthChange.AddListener(Flash);
+        myStats.OnTakeDamage.AddListener(Flash);
     }
 
-    public void Flash(int damage, int newHealth) {
-        Debug.Log("flash");
-
+    public void Flash(int damage) {
         // If the flashRoutine is not null, then it is currently running.
         if (flashRoutine != null) {
             // In this case, we should stop it first.
