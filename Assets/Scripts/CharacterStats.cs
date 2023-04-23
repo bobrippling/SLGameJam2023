@@ -13,7 +13,7 @@ public class OnTakeDamageEvent : UnityEvent<int> {
 public class CharacterStats : MonoBehaviour {
     public List<int> maxHealths;
     private List<int> currentHealths;
-    
+
     public AudioClip deathClip;
     public OnHealthChangeEvent OnHealthChange = new OnHealthChangeEvent();
     public OnTakeDamageEvent OnTakeDamage = new OnTakeDamageEvent();
@@ -32,6 +32,8 @@ public class CharacterStats : MonoBehaviour {
         var newHealth = Mathf.Max(currentHealth - damage, 0);
         currentHealths[currentUniverse] = newHealth;
 
+        Debug.Log("TakeDamage(" + damage + ")");
+
         OnHealthChange.Invoke(currentUniverse, newHealth);
         OnTakeDamage.Invoke(damage);
 
@@ -44,6 +46,7 @@ public class CharacterStats : MonoBehaviour {
         bool isDead = isPlayer ? IsDeadPlayer() : IsDeadEnemy();
 
         if (isDead) {
+            Debug.Log("Dead");
             Die();
         }
     }
@@ -78,5 +81,11 @@ public class CharacterStats : MonoBehaviour {
         }
         AudioManager.Instance.PlaySound(deathClip, transform.position);
         Destroy(gameObject);
+    }
+
+    public void Heal() {
+        for (int i = 0; i < currentHealths.Count; i++) {
+            currentHealths[i] = maxHealths[i];
+        }
     }
 }
