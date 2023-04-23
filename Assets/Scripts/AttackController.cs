@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour {
 
-    // universe properties (set by spawner)
+    // universe properties (set by spawner or playeruniverse)
     public float attackCooldown;
-
     public int damage;
     public AudioClip shootClip;
 
