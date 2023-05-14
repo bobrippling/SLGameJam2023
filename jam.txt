@@ -1,0 +1,21 @@
+BUGS / FIXES
+	[x] Clamp bounds for camera and units
+	[x] Fix restart
+
+GAMEPLAY
+	[x] enemies same across universe
+	[ ] way to get health back
+	[ ] Different enemy types
+
+TECH
+	[ ] destroy after timer - bullets and shockwave
+
+JUICE
+	[ ] Shockwave on universe change
+	[ ] fade non active healthbars
+	[ ] VFX on kill
+	[ ] screen shake
+
+	[ ] Sound of kill
+	[ ] sound to universe change
+	[ ] sound for health pick up
